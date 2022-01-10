@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# learn-react-hooks
+In this project we learn how to use various react hooks.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Reasons to choose react hooks over react classes:
+● No need for conversion from functional to component class: In React app there is a need to change functional class with props to component class with the state as the application grows. This process becomes sometimes difficult due to large complex classes. React hooks save us from this scenario as it has the capability to pass state in the functional component.
+● The significance of “this” becomes less: “this” keyword always confuses developers with its functionality. We can avoid the use of “this” keyword with React hooks which is beneficial for new developers.
+● No need for binding methods: In React applications we have to bind functions together to make them functional and that makes things confusing. With React hooks, this thing becomes easier as it has inbuilt functions for this.
+● Logic And UI are decoupled: Using hooks, logic and UI is easy to distinguish. No need for HOC or render props. Hooks do it beautifully with a small boilerplate and a precise design of the UI and logic. This makes code more reusable.
+● Related Logic at Same Place: React Hooks keeps all related logic at one place unlike life cycle methods in classes. We have to differently define things in componentDidMount or componentDidUpdate which makes things confusing when they are filled with many logics.
+● Helps to share stateful logic between components: Unlike classes React hooks helps to share the same logic between different components which is not possible with classes as there each component has its own state and sources.
 
-## Available Scripts
+## useState Hook
+What does calling useState do? 
+It declares a “state variable”. 
 
-In the project directory, you can run:
+What do we pass to useState as an argument? 
+The only argument to the useState() Hook is the initial state. Unlike with classes, the state doesn’t have to be an object. We can keep a number or a string if that’s all we need.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+What does useState return? 
+It returns a pair of values: the current state and a function that updates it. This is why we write const [email, setEmail] = useState(). This is similar to this.state.email and this.setState in a class, except you get them in a pair.
